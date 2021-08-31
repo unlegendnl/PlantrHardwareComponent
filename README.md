@@ -10,3 +10,8 @@ COMPONENTS
 - Lilly TTGO repository edited to spit out plant data every minute to a MQTT server (needs WIFI credentials in user-variables.h and optional plant name for ID purposes)
 - Standard MQTT server defined in the docker-compose file
 - Node-Red configured to subscribe to the MQTT gateway and spit the data as JSON to a defined adress
+
+OVERVIEW
+How the compoments should talk (Note: the MQTT broker and NodeRed module should be hosten on a RPI or other hardware solution)
+
+TTGO-ESP32>-------(mqtt messgae)-------->MQTT broker>-------(mqtt message)------>NodeRed>-----(REST API call)---->defined endpoint
