@@ -42,11 +42,11 @@ String plant_name = "maya palm";
 int plantValveNo = 1;
 
 // define your SSID's, and remember to fill out variable ssidArrNo with the number of your SSID's
-String ssidArr[] = {"SSID"};
+String ssidArr[] = {"Squadra nieuw"};
 int ssidArrNo = 1;
 
 const char* ssid = ""; // no need to fill in
-const char* password = "PW";
+const char* password = "";
 const char* ntpServer = "pool.ntp.org";
 
 // Off-sets for time, and summertime. each hour is 3.600 seconds.

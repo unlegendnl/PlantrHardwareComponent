@@ -21,8 +21,7 @@ void saveConfiguration(const Config & config) {
   }
   Serial.println("chipId " + chipId);
 
-  const String topicStr = "Plant/Trescanas";
-  const String topicStr = "Plant/Mayapalm";
+  const String topicStr = "Plant";
 
   const char* topic = topicStr.c_str();
   Serial.println(topic);
@@ -35,18 +34,18 @@ void saveConfiguration(const Config & config) {
 
   JsonObject plant = root.createNestedObject("plantData");
   //plant[device_name] = chipId;
-  plant["sensorname"] = plant_name;
+  plant["sensorname"] = "mayapalm schubertlaan";
   plant["date"] = config.date;
   plant["time"] = config.time;
-  //plant["sleep5Count"] = config.sleep5no;
-  //plant["bootCount"] = config.bootno;
+  plant["sleep5Count"] = config.sleep5no;
+  plant["bootCount"] = config.bootno;
   plant["lux"] = config.lux;
   plant["temp"] = config.temp;
   plant["humid"] = config.humid;
   plant["soil"] = analogRead(SOIL_PIN);
-  //plant["soilTemp"] = config.soilTemp;
-  //plant["salt"] = config.salt;
-  //plant["saltadvice"] = config.saltadvice;
+  plant["soilTemp"] = config.soilTemp;
+  plant["salt"] = config.salt;
+  plant["saltadvice"] = config.saltadvice;
   //plant["bat"] = config.bat;
   //plant["batcharge"] = config.batcharge;
   //plant["batchargeDate"] = config.batchargeDate;
