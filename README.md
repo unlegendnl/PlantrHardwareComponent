@@ -21,3 +21,7 @@ HOW TO USE:
 1: upload the TTGO hi-go microcontroller code (dont forget to add WiFi credentials and plant ID)
 2: spin up the docker-compose.yaml. this activates the MQTT broker and nodeRed instance
 3: observe the traffic on nodeRed, if needed the endpoint where data is sent can be changed. 
+
+
+sudo docker run -it --name eclipse-mosquitto -p 1883:1883 eclipse-mosquitto:1.6
+docker run -it -p 1880:1880 --name mynodered nodered/node-red
