@@ -1,5 +1,7 @@
 # PlantrHardwareComponent
 
+this repository is a deployment item of https://github.com/unlegendnl/plantrDeployment
+
 this project includes everything that is needed to extract data from a garden and send it to a rest api for data collection
 
 HARDWARE
